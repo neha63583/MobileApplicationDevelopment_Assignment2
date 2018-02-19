@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="ca.georgebrown.comp3074.a2101043939.LoggedInActivity">
+
+    <EditText
+        android:id="@+id/pIdEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Enter patient ID"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/pfnameEditText" />
+
+    <EditText
+        android:id="@+id/pfnameEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="First name"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/plnameEditText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/plnameEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/pdepEditText" />
+
+    <EditText
+        android:id="@+id/pdepEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Department"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/pDocIdEditText" />
+
+    <EditText
+        android:id="@+id/pDocIdEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Doctor Id"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/pRoomEditText"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/pRoomEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Room"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/addPatientBtn" />
+
+    <Button
+        android:id="@+id/addPatientBtn"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="addPatient"
+        android:text="Add Patient"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/displayPatientBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/displayPatientBtn"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Display Patients"
+        android:onClick="displayPatients"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/testPageBtn" />
+
+    <Button
+        android:id="@+id/testPageBtn"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="goToTestPage"
+        android:text="Tests"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="136dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Logout"
+        android:onClick="clickLogout"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pIdEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintVertical_bias="0.459"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.965" />
+
+</android.support.constraint.ConstraintLayout>

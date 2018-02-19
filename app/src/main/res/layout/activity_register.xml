@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="ca.georgebrown.comp3074.a2101043939.RegisterActivity">
+
+    <EditText
+        android:id="@+id/docnurseIdEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Enter Doctor/Nurse  ID"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/dnFnameEditText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/dnFnameEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="First name"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/dnLnameEditText" />
+
+    <EditText
+        android:id="@+id/dnLnameEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/dnDepEditText" />
+
+    <EditText
+        android:id="@+id/dnDepEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Department"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/dnEmailEditText" />
+
+    <EditText
+        android:id="@+id/dnEmailEditText"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/registerDoctorBtn" />
+
+    <Button
+        android:id="@+id/registerDoctorBtn"
+        android:layout_width="326dp"
+        android:layout_height="46dp"
+        android:text="Register for Doctor"
+        android:onClick="registerDoctor"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/registerNurseBtn"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/registerNurseBtn"
+        android:layout_width="324dp"
+        android:layout_height="46dp"
+        android:text="Register for Nurse"
+        android:onClick="registerNurse"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="44dp" />
+
+    <ImageView
+        android:id="@+id/hosImageView"
+        android:layout_width="117dp"
+        android:layout_height="89dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/docnurseIdEditText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51"
+        app:srcCompat="@drawable/hos" />
+
+</android.support.constraint.ConstraintLayout>
